@@ -94,18 +94,18 @@ WSGI_APPLICATION = "budget.wsgi.application"
 #     }
 # }
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.mysql",
-#         "NAME": env.str("DATABASE_NAME"),
-#         "USER": env.str("DATABASE_USER"),
-#         "PASSWORD": env.str("DATABASE_PASSWD"),
-#         "HOST": env.str("DATABASE_HOST"),
-#         "PORT": env.str("DATABASE_PORT"),
-#     }
-# }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": env.str("DATABASE_NAME"),
+        "USER": env.str("DATABASE_USER"),
+        "PASSWORD": env.str("DATABASE_PASSWD"),
+        "HOST": env.str("DATABASE_HOST"),
+        "PORT": env.str("DATABASE_PORT"),
+    }
+}
 
-DATABASES = {"default": dj_database_url.parse(env.str("DB_LINK"))}
+# DATABASES = {"default": dj_database_url.parse(env.str("DB_LINK"))}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
